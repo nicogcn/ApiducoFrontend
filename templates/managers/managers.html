@@ -1,0 +1,19 @@
+<div>
+    <h1>MANAGERS</h1>
+    <table>
+        <thead>
+            <th>Indentificación</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="manager in managers.managers">
+                <td>{{manager.identification}}</td>
+                <td>{{manager.firstName}}</td>
+                <td>{{manager.lastName}}</td>
+                <td><button ng-click="managers.update(manager.idManager)">Editar</button></td>
+                <td><button ng-click="managers.delete(manager.idManager)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
