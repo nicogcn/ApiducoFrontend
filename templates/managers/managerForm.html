@@ -1,0 +1,14 @@
+<h5>{{form.formTitle}}</h5>
+<form>
+    <label for="managerFirstName">Nombre: </label>
+    <input type="text" id="managerFirstName" placeholder="Nombre del laboratorista" ng-model="form.man.firstName">
+    <label for="managerLastName">Apellido: </label>
+    <input type="text" id="managerLastName" placeholder="Apellido del laboratorista" ng-model="form.man.lastName">
+    <label for="managerIdentification">Identificación: </label>
+    <input type="text" id="managerIdentification" placeholder="Identificación del laboratorista" ng-model="form.man.identification">
+    <button ng-click="form.execute()">{{form.butnText}}</button>
+    <button ui-sref="managers">Cancelar</button>
+</form>
+<div ng-if="form.error">
+    <p>Error: {{form.textError}}</p>
+</div>
